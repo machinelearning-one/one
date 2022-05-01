@@ -27,6 +27,8 @@ const Meta = ({
 
       <meta name="description" content={description} />
 
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
       <meta property="og:url" content={`${url}${path}`} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
