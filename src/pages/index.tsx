@@ -1,6 +1,6 @@
 import type { Page } from "../types";
 import { ReactNode } from "react";
-import { MainLayout } from "../layouts";
+import { MainLayout } from "../plugins/layouts";
 import Meta from "../components/core/Meta";
 
 import type { HeroProps } from "../components/home/Hero";

@@ -30,7 +30,7 @@ const DevelBanner = () => {
 
 const underConstruction = true;
 
-interface LayoutProps {
+export interface LayoutProps {
   children?: ReactNode;
 }
 

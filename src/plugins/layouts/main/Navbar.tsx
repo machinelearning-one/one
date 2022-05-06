@@ -2,13 +2,13 @@ import Router from "next/router";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Dialog } from "@headlessui/react";
-import DarkMode from "../../components/core/DarkMode";
+import DarkMode from "../../../components/core/DarkMode";
 import {
   OptionsIcon,
   CloseIcon,
   GithubIcon,
   MLOneIcon,
-} from "../../components/core/Icons";
+} from "../../../components/core/Icons";
 
 interface LinkProps {
   href: string;

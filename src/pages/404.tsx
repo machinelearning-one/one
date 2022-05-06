@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import type { Page } from "../types";
 import type { ReactNode } from "react";
-import Layout from "../layouts/main";
+import { MainLayout } from "../plugins/layouts";
 import Meta from "../components/core/Meta";
 import PageHeader from "../components/core/PageHeader";
 import type { PageHeaderProps } from "../components/core/PageHeader";
@@ -42,7 +42,7 @@ const Custom404: Page = () => {
 Custom404.getLayout = (children: ReactNode) => {
   return (
     <>
-      <Layout>{children}</Layout>
+      <MainLayout>{children}</MainLayout>
     </>
   );
 };

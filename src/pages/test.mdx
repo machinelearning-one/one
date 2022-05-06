@@ -1,0 +1,15 @@
+import { MarkDownLayout } from "../plugins/layouts";
+
+export const meta = {
+  title: "Einsum for Effective Tensor Manipulation",
+};
+
+# {meta.title}
+
+```python
+from einops import rearrange
+```
+
+export default ({ children }) => {
+  return <MarkDownLayout meta={meta}>{children}</MarkDownLayout>;
+};
