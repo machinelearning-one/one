@@ -14,7 +14,7 @@ const nextConfig = {
     locales: ["en-US"],
     defaultLocale: "en-US",
   },
-  pageExtensions: ["tsx", "mdx"],
+  pageExtensions: ["ts", "tsx", "mdx"],
 };
 
 module.exports = withMDX(nextConfig);
