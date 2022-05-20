@@ -1,0 +1,28 @@
+import { MarkDownLayout } from "../plugins/layouts";
+
+export const meta = {
+  title: "Interpreting Large Language Models through the Lenses of Causality",
+  published: "2022-05-20",
+};
+
+# {meta.title}
+
+<span className="flex w-full justify-center"> {meta.published} </span>
+
+One of the reasons the GPT family of models gained prominence (even outside of the research community) is that the quality of generated text resembles that of human writing. Proponents of the 'scale-is-all-you-need' approach attribute it as an emergent property that's a function of scale. I posit that it stems from a combination of the autoregressive nature of the model and the use of symbolic search mechanisms.
+
+Most AI models stand at the bottom of Pearl's Ladder of Causation (on the rung of associativity). Beam search pulls the system toward the rung of intervention by letting the generation process ask: "what if I had chosen another word at a particular stage?". Note that this notion of causality is much weaker than the one Pearl uses. For one, it imagines the world to consist of only words. The top-k or top-p sampling further restricts how many do-operators we can mimic. Even so, it furthers the capabilities of the entire system by orders of magnitude over a purely associative model.
+
+Is this to say that associativity plays no role in the capabilities a hybrid model gains? Just like the accuracy of the causal diagram dictates the quality of its inference, accurate world models are essential for the success of generative methods. Self-supervised learning and autoregressive modeling, in particular, lend themselves well to achieving this prerequisite accuracy in modeling. Our tendency to seek common phrases or group relevant words together makes the autoregressive model a natural match for language-based tasks.
+
+Our causal understanding allows us to design counterfactuals that strengthen or weaken the above hypothesis. If we can achieve similar or better performance while swapping the neural part with a scaled-down version of itself, it would boost our theory. On the other hand, if a company comes up with an LLM that performs on par but doesn't incorporate symbolic search, it would add credence to the idea that scale can replace elements we deem necessary for intelligence.
+
+Chinchilla by Google does add to our theory to a certain extent (2.5x reduction in parameters compared to GPT-3 while performing better). If we deem that incorporating causality (even in weaker forms) would improve generative capabilities, what directions should we explore next?
+
+If we were to focus on the existing notion of causality without strengthening it, exploring other heuristic search algorithms in place of beam search is a viable option. It's also a direction that utilizes the least compute as one can use a pre-trained language model as a backbone and iterate over just the symbolic part to quantify its effect. If we wish to bring ourselves closer to the second rung of causality, we need to improve our world beyond just words. Socratic methods extend what is captured by the symbols that go into the search routine by combining models with different input modalities. The MRKL system on top of Jurassic-X by AI-21 labs describes how external knowledge sources and symbolic models can augment LLMs. Adding physical meaning to what the tokens represent seems like a good direction for increasing the usefulness of LLMs.
+
+We still are left with another rung to move towards (I avoid 'climb' here as we have mimicked and not climbed the second rung). How can we improve the design of generative models with counterfactuals? What form would imagination in this context take? It's an open question, an answer to which would allow us a similar leap in capabilities that GPT showed.
+
+export default ({ children }) => {
+  return <MarkDownLayout meta={meta}>{children}</MarkDownLayout>;
+};

@@ -12,7 +12,7 @@ const MarkDownLayout = (props: LayoutProps) => {
   return (
     <MainLayout>
       {props.meta && props.meta.title && <Meta title={props.meta.title} />}
-      <Section className="prose mx-auto max-w-5xl pt-16">
+      <Section className="prose mx-auto max-w-5xl pt-16 pb-32">
         {props.children}
       </Section>
     </MainLayout>
